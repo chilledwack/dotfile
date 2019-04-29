@@ -18,7 +18,6 @@ inoremap jk <esc>
 colorscheme tender
 syntax enable
 
-let g:lightline = { 'colorscheme': 'tender' }
 set autoindent
 set tabstop=2 
 set shiftwidth=4
@@ -26,6 +25,9 @@ set expandtab
 set softtabstop=2
 set ignorecase
 set smartcase
+
+" set airline theme
+let g:airline_theme = 'tender'
 
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
