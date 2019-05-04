@@ -6,6 +6,7 @@ Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'vim-airline/vim-airline'
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'jacoborus/tender.vim'
+Plug 'Yggdroot/indentLine'
 call plug#end()
 
 
