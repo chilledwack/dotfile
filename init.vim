@@ -16,8 +16,9 @@ set showcmd  "命令模式底部显示键入指令
 set nocompatible  "不与vi兼容
 syntax on  "语法高亮
 inoremap jk <esc>  
-colorscheme tender
 syntax enable
+autocmd FileType json syntax match Comment +\/\/.\+$+
+colorscheme tender
 
 set autoindent
 set tabstop=2 
@@ -34,6 +35,9 @@ inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
 inoremap { {}<Esc>i
 inoremap " ""<Esc>i
+
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
